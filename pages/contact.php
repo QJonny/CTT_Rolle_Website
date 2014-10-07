@@ -52,7 +52,7 @@ Dans le cas o&ugrave; il n'est pas possible d'utiliser ce formulaire (probl&egra
                                 $msg_status = -5;
                         }
                         else {
-                                $subject = '[CTT Rolle] Message de '.$nom;
+                                $subject = '[CTT Rolle] Message de '.$nom.' ('.$email.')';
 
 																switch($comite)
 																{

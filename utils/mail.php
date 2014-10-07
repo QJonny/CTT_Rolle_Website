@@ -24,7 +24,6 @@
 		$mail = _InitMailer($mail_config_);
 
 		$mail->From = $from;
-		$mail->FromName = $from;
 		$mail->Subject = $subject;
 		$mail->addAddress($to, '');
 
