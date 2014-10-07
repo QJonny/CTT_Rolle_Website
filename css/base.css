@@ -1,0 +1,35 @@
+
+a {
+	text-decoration:none;
+}
+
+a:focus
+{
+	outline:0;
+} 
+
+img {
+	border:0;
+}
+
+textarea {
+        resize:none;
+}
+
+h2 {
+        text-align:center;
+}
+
+.text_paragraph {
+        display:block;
+        position:relative;
+        text-align:justify;
+        width:900px;
+        left:65px;
+}
+
+.title {
+	text-align:center;
+	font-size:40px;
+	font-weight:bold;
+}

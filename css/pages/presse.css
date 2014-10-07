@@ -1,0 +1,12 @@
+ul li { 
+        display: block; 
+}
+
+li a img {
+        position:relative;
+        width:500px;
+
+        left:265px;
+        border: 1px solid black;
+}
+

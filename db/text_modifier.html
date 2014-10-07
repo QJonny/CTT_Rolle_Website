@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="encoder.js"></script>
+</head>
+<body>
+<h1>Text Modifier</h1>
+<p>This little webpage enables the user to translate any inserted text into an html representation of it (accents replaced, line returns translated into the specific tag. etc...)</p>
+
+Insert your text here:<textarea id="input_" name="input_text" rows=30 cols=150></textarea><br/>
+<input type="submit" value="Translate" onclick="changeText();"> <br/>
+Output text: <textarea id="output_" name="output_text" rows=30 cols=150></textarea>
+
+<script>
+// or to set it to encode to html entities e.g & instead of &
+Encoder.EncodeType = "entity";
+
+
+
+
+function changeText() {
+	var str = $( "#input_" ).val();
+
+	// HTML encode text from an input element
+	// This will prevent double encoding.
+	var encoded = Encoder.htmlEncode(str);
+
+	$( "#output_" ).val( encoded );
+}
+
+</script>
+
+</body>

@@ -1,0 +1,8 @@
+th, td {
+        width: 175px;
+}
+
+.text_paragraph a {
+        text-decoration: underline;
+        font-weight:bold;
+}
