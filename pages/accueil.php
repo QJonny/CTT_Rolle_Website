@@ -136,6 +136,7 @@ displayNews();
 
       if(strlen($msg) > 700) {
         $msg = substr($msg, 0, 700);
+				$msg = $msg.' ...';
       }
 
       echo '<div id="news_'.$i.'">';
