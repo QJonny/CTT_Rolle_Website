@@ -1,0 +1,27 @@
+
+#menu_gestion {
+        position:relative;
+        display:block;
+        top:30px;
+        width:100%;
+}
+
+
+#menu_gestion a {
+        position:relative;
+        display:block;
+        width:140px;
+        left:70px;
+}
+
+#menu_gestion img {
+        border: 1px solid black;
+        position:relative;
+        width:100%;
+}
+
+
+#menu_gestion h3 {
+	text-align:center;
+}
+
