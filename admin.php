@@ -9,16 +9,59 @@
 
 <link rel="stylesheet" type="text/css" href="css/base.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
-<link rel="stylesheet" type="text/css" href="css/admin.css">
-<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="css/admin/admin.css">
+<link rel="stylesheet" type="text/css" href="css/admin/menu.css">
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <link rel="stylesheet" type="text/css" href="css/footer.css">
 
 <?php
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+
 	include("./utils/configuration_managers.php");
 	include("./config/config.php");
 
 	include("./utils/database.php");
+
+	include("./pages/admin/session.php");
+
+	$session = new Session($db_config);
+	// Set to true if using https
+	$session->start_session('_s', false);
+
+	if(isset($_POST['admin_dec_form'])) {
+		$_SESSION['log_status'] = 'unlogged';
+	}
+
+	// User logged??
+	if(isset($_POST['admin_form_user']) and isset($_POST['admin_form_pwd']))
+	{
+		$db = new DatabaseManager;
+
+		$db->Connect($db_config);
+
+
+		$query = 'SELECT is_admin FROM Users WHERE username="'.$_POST['admin_form_user'].'" AND password="'.md5($_POST['admin_form_pwd']).'"';
+		$db->ApplyQuery($query);
+
+		$data = $db->GetNext();
+
+		if(isset($data) and $data['is_admin'] == 1) {
+				$_SESSION['log_status'] = 'logged';
+				$_SESSION['user'] = $_POST['admin_form_user'];
+		}
+		else {
+			$_SESSION['log_status'] = 'bad';
+		}
+	}
+
+	$page = '';
+
+	if(isset($_GET['page'])) {
+    $page  = htmlentities($_GET['page']);
+	}
+
 ?>
 
 </head>
