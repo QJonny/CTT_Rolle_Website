@@ -32,6 +32,12 @@ class DatabaseManager
 		}
 	}
 
+	public function ApplyUpdateQuery($query)
+	{
+		$this->db->query($query);
+	}
+
+	
 	public function GetNext()
 	{
 		return $this->response->fetch_assoc();

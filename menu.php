@@ -43,6 +43,7 @@
 		}
 	?>" href="index.php?page=contact" style="top:100px;">Contact</a>
 
+<a class="menu_color menu_item" href="admin.php" style="top:120px;">Administration</a>
 
 
 
@@ -75,18 +76,18 @@ style="top:35px;">TT ou Ping ?</a>
 <script type="text/javascript">		
 	$("#menu_item_club").hover(function(){
 	  $("#sub_menu_club").css("display","block");
-	  $("#menu_links").css("top","-250px");
+	  $("#menu_links").css("top","-240px");
 	  },function(){
 	  $("#sub_menu_club").css("display","none");
-	  $("#menu_links").css("top","130px");
+	  $("#menu_links").css("top","140px");
 	});
 
 	$("#sub_menu_club").hover(function(){
 	  $("#sub_menu_club").css("display","block");
-	  $("#menu_links").css("top","-250px");
+	  $("#menu_links").css("top","-240px");
 	  },function(){
 	  $("#sub_menu_club").css("display","none");
-	  $("#menu_links").css("top","130px");
+	  $("#menu_links").css("top","140px");
 	});
 </script>
 
