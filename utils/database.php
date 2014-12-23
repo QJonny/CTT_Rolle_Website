@@ -32,7 +32,7 @@ class DatabaseManager
 		}
 	}
 
-	public function ApplyUpdateQuery($query)
+	public function ApplyCommand($query)
 	{
 		$this->db->query($query);
 	}

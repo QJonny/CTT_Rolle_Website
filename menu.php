@@ -43,7 +43,7 @@
 		}
 	?>" href="index.php?page=contact" style="top:100px;">Contact</a>
 
-<a class="menu_color menu_item" href="admin.php" style="top:120px;">Administration</a>
+<a class="menu_color menu_item" href="admin.php" style="top:120px;">Admin</a>
 
 
 
